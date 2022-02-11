@@ -23,7 +23,7 @@ void            strReplace(std::string *str, std::string str1, std::string str2)
     int position;
 
     position = str->find(str1);
-    while (position > 0) {
+    while (position >= 0) {
         before = str->substr(0, position);
         after = str->substr(position + str1.length(), str->length());
         *str = before + str2 + after;
@@ -43,7 +43,7 @@ void            usage() {
 }
 
 int             sed_is_for_losers(int argc, char **argv) {
-    if (argc < AMOUNT_OF_ARGUMENTS || argc > AMOUNT_OF_ARGUMENTS + 1) {
+    if (argc != AMOUNT_OF_ARGUMENTS + 1) {
         usage();
         return (0);
     }

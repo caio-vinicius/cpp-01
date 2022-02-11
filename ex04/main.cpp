@@ -63,6 +63,7 @@ int             sed_is_for_losers(int argc, char **argv) {
     content = readEntireFile(ifile);
     strReplace(content, str1, str2);
     ofile << *content;
+    delete content;
     ofile.close();
     ifile.close();
     return (1);

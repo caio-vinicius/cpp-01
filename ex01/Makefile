@@ -6,14 +6,14 @@
 #    By: csouza-f <caio@42sp.org.br>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/20 23:40:44 by csouza-f          #+#    #+#              #
-#    Updated: 2022/02/02 22:32:05 by csouza-f         ###   ########.fr        #
+#    Updated: 2022/02/10 20:56:58 by csouza-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = moarbrainz
 
 SOURCES = ./
-SOURCES_FILES = Zombie.cpp main.cpp
+SOURCES_FILES = Zombie.cpp ZombieHorde.cpp main.cpp
 SOURCES_FILES_FULL = $(addprefix $(SOURCES)/,$(SOURCES_FILES))
 
 OBJECTS = ./objects

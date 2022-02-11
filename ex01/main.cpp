@@ -13,14 +13,16 @@ int moarbrainz() {
     horde = zombie.zombieHorde(2, "darnell");
     for (unsigned int i = 0; i < 2; i++) {
         std::cout << "-> " << \
-            i << "º zombie name: " << horde[0].getName() << " | " << &horde[0] << std::endl;
+            i << "º zombie name: " << horde[i].getName() << " | " << &horde[i] << std::endl;
+        horde[i].announce();
     }
     delete[] horde;
     std::cout << "2º test: 10 zombies in horde named `creed`." << std::endl;
     horde = zombie.zombieHorde(10, "creed");
     for (unsigned int i = 0; i < 10; i++) {
         std::cout << "-> " << \
-            i << "º zombie name: " << horde[0].getName() << " | " << &horde[0] << std::endl;
+            i << "º zombie name: " << horde[i].getName() << " | " << &horde[i] << std::endl;
+        horde[i].announce();
     }
     delete[] horde;
     return (0);

@@ -20,3 +20,11 @@ output_file
 ./sedisforlosers creed x ~
 echo "FILE creed.replace after 'x' to '~'"
 output_file
+
+./sedisforlosers creed x x
+echo "FILE creed.replace after 'x' to 'x'"
+output_file
+
+./sedisforlosers creed x xx
+echo "FILE creed.replace after 'x' to 'xx'"
+output_file

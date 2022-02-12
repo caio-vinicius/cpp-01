@@ -22,15 +22,12 @@ void            strReplace(std::string *str, std::string str1, std::string str2)
     std::string after;
     int position;
 
-    if (str1 == str2) {
-        return ;
-    }
     position = str->find(str1);
     while (position >= 0) {
         before = str->substr(0, position);
         after = str->substr(position + str1.length(), str->length());
         *str = before + str2 + after;
-        position = str->find(str1);
+        position = str->find(str1, position + str2.length());
     }
 }
 
